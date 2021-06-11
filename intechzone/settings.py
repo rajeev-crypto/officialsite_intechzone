@@ -1,4 +1,4 @@
-
+import django_heroku
 from pathlib import Path
 import os
 import environ
@@ -119,3 +119,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'zoneintech@gmail.com'
+
+
+django_heroku.settings(locals())
+
+
