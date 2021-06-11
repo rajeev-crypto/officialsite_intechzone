@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+	{% extends "base_frontend.htm" %}
+	{% load static %}
+		
+	{% block content %}	
+		
+		<!-- Content -->
+		<div class="content-wrap with-icons">
+
+			<!-- Slide -->
+			<div class="slide-block">
+				
+				<div class="slide-block-inner">
+					
+					<!-- Figure -->
+					<!-- <div class="figure-wrap">
+						<div class="tbl">
+							<div class="cell">	
+								<div class="figure">
+									<img class="f-top" src="images/figures/fe_top.png">
+
+									<img class="f-btm" src="images/figures/fe_btm.png">
+
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- Cell -->
+					<div class="tbl">
+						<div class="cell">
+							<div class="slide-navigation">
+								<a class="slide-title slide-title-nav prev" href="{% url 'apps' %}">
+									<div class="title">Apps</div>
+									<div class="title-s">
+										Developing and designing world’s first class apps
+									</div>
+								</a>
+
+								<a class="slide-title current" href="{% url 'frontend' %}">
+									<div class="title">Front-End</div>
+									<div class="title-s">
+										Front-end development is a process of the creation site’s client-side
+									</div>
+								</a>
+
+								<a class="slide-title slide-title-nav next" href="{% url 'backend' %}">
+									<div class="title">Back-End</div>
+									<div class="title-s">
+										Flawless code with no exceptions
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Orbit -->
+					<div class="orbit-wrap inner">
+						<ul class="orbit">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+
+						<div class="orbit-star orbit-star-1">
+							<span></span>
+						</div>
+						<div class="orbit-star orbit-star-2">
+							<span></span>
+						</div>
+						<div class="orbit-star orbit-star-3">
+							<span></span>
+						</div>
+						<div class="orbit-star orbit-star-4">
+							<span></span>
+						</div>
+					</div>
+
+					<!-- Stars -->
+					<div class="stars-wrap">
+						<div class="stars-1"></div>
+						<div class="stars-2"></div>
+						<div class="stars-3"></div>
+						<div class="stars-4"></div>
+					</div>
+
+				</div>
+			</div><!-- / Slide -->
+			
+			<!-- Content -->	
+			<div class="content-block">
+				<div class="icon-wrap">	
+					<ul class="icon-row">
+						<li>
+							<a href="{% url 'frontend_react' %}">
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+								<div class="tbl">
+									<div class="cell">
+										<img width="45" src="{% static '/images/svg/icon-rn.svg' %}" alt="">
+									</div>
+								</div>
+								
+								<div class="icon-name">React</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="{% url 'frontend_redux' %}">
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+									<div class="tbl">
+										<div class="cell">
+											<img width="44" src="{% static '/images/svg/icon-redux.svg' %}" alt="">
+										</div>
+									</div>
+								
+								<div class="icon-name">Redux</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="{% url 'frontend_angular' %}">
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+								
+									<div class="tbl">
+										<div class="cell">
+											<img width="46" src="{% static '/images/svg/icon-ang.svg' %}" alt="">
+										</div>
+									</div>
+								
+								<div class="icon-name">Angular</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="{% url 'frontend_aurelia' %}">
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+								
+									<div class="tbl">
+										<div class="cell">
+											<img width="46" src="{% static '/images/svg/icon-aurelia.svg' %}" alt="">
+										</div>
+									</div>
+							
+								<div class="icon-name">Aurelia</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="{% url 'frontend_reactnative' %}">
+								<div class="tape"><span>Native</span></div>
+
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+									<div class="tbl">
+										<div class="cell">
+											<img width="45" src="{% static '/images/svg/icon-rn.svg' %}" alt="">
+										</div>
+									</div>
+								
+								<div class="icon-name">React Native</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="{% url 'frontend_angular2' %}">
+								<div class="tape"><span>2.0</span></div>
+
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+							
+									<div class="tbl">
+										<div class="cell">
+											<img width="46" src="{% static '/images/svg/icon-ang.svg' %}" alt="">
+										</div>
+									</div>
+								
+								<div class="icon-name">Angular 2.0</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="{% url 'frontend_vue' %}">
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+								
+									<div class="tbl">
+										<div class="cell">
+											<img width="46" src="{% static '/images/svg/icon-vue.svg' %}" alt="">
+										</div>
+									</div>
+								
+								<div class="icon-name">Vue JS</div>
+							</a>
+						</li>
+
+						<li>
+							<a href="{% url 'frontend_next' %}">
+								<div class="inner"></div>
+								<div class="inner-s"></div>
+
+								
+									<div class="tbl">
+										<div class="cell">
+											<img width="46" src="{% static '/images/svg/icon-next.svg' %}" alt="">
+										</div>
+									</div>
+								
+								<div class="icon-name">Next JS</div>
+							</a>
+						</li>
+					</ul>	
+				</div>
+
+				<div class="content">
+					
+					<h2>How Does Front-End Work</h2>
+
+					<p>
+						Front-end development is a process of the creation site’s client-side. Front-end developer is engaged in site layout template and user interface creation. Typically, front-end developer - is a master of all trades. He must have the design talent, be a high-skilled coder and a good programmer - like all-in-one.
+
+
+					</p>
+
+					<p>
+						The modern front-end developer should easily hold html5 and css3, JavaScript (and at least JQuery), main front end development tools. Each front-end specialist has his own designs, which he keeps in frameworks etc. Many developers work in the popular frameworks, such as TwitterBootstrap, Foundation 3, Compass.
+
+					</p>
+					
+					<p>
+						Front-end developers are experts in their field and usually have many skills from related fields.
+
+
+					</p>
+
+					<p>
+						They have learned about HTML, CSS, usability, design, color theory and more on Javascript. Most likely, in addition, a front-end developer has read a couple of books on the server-side programming languages, which describes the interaction with the server side using Ajax technologies. Front end developers should consider the methods of project development in general: they are in addition to the HTML markup and write Javascript code often have to deal with an even number of technologies. Front-end developer deals not only with the specific concepts and tasks in his work, but often with abstract thinking.
+
+					</p>
+
+					<p>
+						He is one of those people who can build a bridge between mathematics and art, he actually takes mathematics as an art.
+
+					</p>
+				</div>
+			</div><!-- / Content -->		
+
+		</div><!-- / Content -->
+		
+
+
+	
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- Scripts -->
+	<script src="{% static '/js/button-hover-effect/CSSPlugin.min.js' %}"></script>
+	<script src="{% static '/js/button-hover-effect/EasePack.min.js' %}"></script>
+	<script src="{% static '/js/button-hover-effect/TweenLite.min.js' %}"></script>
+	<script src="{% static '/js/button-hover-effect/TimelineLite.min.js' %}"></script>
+	
+	<script src="{% static '/js/itemslide.min.js' %}"></script> 
+	<script src="{% static '/js/modernizr-custom.js' %}"></script> 
+	<script src="{% static '/js/scripts.js' %}"></script> 
+	<script src="{% static '/js/plugins.js' %}"></script> 
+	
+	<!-- Live Reload -->
+	<script src="http://localhost:35729/livereload.js"></script>
+	{% endblock %}
+	</body>
+</html>
+

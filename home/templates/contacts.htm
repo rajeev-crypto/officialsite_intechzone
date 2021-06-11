@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+	{% extends "base.htm" %}
+	{% load static %}
+		
+	{% block content %}	
+
+		
+		<!-- Content -->
+		<div class="content-wrap content-wrap-bg">
+			
+			<!-- Orbit -->
+			<div class="orbit-wrap inner">
+				<ul class="orbit">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<div class="orbit-star orbit-star-1">
+					<span></span>
+				</div>
+				<div class="orbit-star orbit-star-2">
+					<span></span>
+				</div>
+				<div class="orbit-star orbit-star-3">
+					<span></span>
+				</div>
+				<div class="orbit-star orbit-star-4">
+					<span></span>
+				</div>
+			</div>
+
+			<!-- Stars -->
+			<div class="stars-wrap">
+				<div class="stars-1"></div>
+				<div class="stars-2"></div>
+				<div class="stars-3"></div>
+				<div class="stars-4"></div>
+			</div>
+			
+			
+			<!-- Contacts -->
+			<div class="contacts-socket">
+				<div class="title-page">
+					<div class="title">Contact Us</div>
+					<div class="title-s">We’ll answer in a moment!</div>
+				</div>
+
+
+
+				<div class="contacts-block">
+					<ul class="contacts-stars">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+
+					<div class="contacts-mail"></div>
+
+					<ul class="contacts-list">
+						<li>
+							<a href="">
+								<img width="15" src="{% static '/images/svg/con-map.svg' %}" alt="" class="ico">
+								<div>Indore</div>
+								<span>MP. ,India</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<img width="15" src="{% static '/images/svg/con-tel.svg'%}" alt="" class="ico">
+								<div>+91 78692 14561</div>
+								<span>Give Us a Call</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<img width="15" src="{% static '/images/svg/con-mail.svg' %}" alt="" class="ico">
+								<div>business@intechzone.in</div>
+								<span>Drop Us a Letter</span>
+							</a>
+						</li>
+					</ul>
+
+					<div class="contacts-form">
+						<!-- <form action=""> -->
+							<!-- <div class="input-cols"> -->
+							<form action="" method="post">
+								<div class="contacts-title">Say hello !
+									{% for msg in messages %}
+										{{msg}}
+										{% endfor %} 
+								</div>
+								
+								<br>
+								{% csrf_token %}
+								<table>
+								{{ form.as_table }}                   
+									<tr>
+										<td></td>
+										<td>
+											<button class="btn btn-s-1 btn-a btn-send">
+												<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+													<defs>
+													  <filter id="goo2">
+														<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+														<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+														<feComposite in="SourceGraphic" in2="goo2"/>
+													  </filter>
+													</defs>
+												  </svg>
+				  
+												  <span class="btn-bubble-container">
+													  <a href="#" class="btn-inner btn-bubble">
+														  <img src="{% static '/images/svg/send.svg' %}" alt="">
+													  </a>
+													  <span class="btn-bubble-effect-container">
+														  <span class="circle top-left"></span>
+														  <span class="circle top-left"></span>
+														  <span class="circle top-left"></span>
+				  
+														  <span class="btn-inner effect-button"></span> 
+				  
+														  <span class="circle bottom-right"></span>
+														  <span class="circle bottom-right"></span>
+														  <span class="circle bottom-right"></span>
+													  </span>
+												  </span> 
+												<input type="submit" value="Submit" style="visibility: hidden;">
+											</button>
+										</td>
+									</tr>
+								</table>
+							<!-- </form -->
+							
+
+
+
+							<!-- <div class="contacts-title">Say hello</div>
+							<div class="input-cols">
+								<div class="input-wrap input-wrap-2">
+									<input placeholder="First Name" type="text">
+								</div>
+
+								<div class="input-wrap input-wrap-2">
+									<input placeholder="Last Name" type="text">
+								</div>
+							</div>
+
+							<div class="input-cols">
+								<div class="input-wrap input-wrap-2 input-wrap-l">
+									<input placeholder="Your Email" type="mail">
+								</div>
+
+								<div class="input-wrap input-wrap-2 input-wrap-l">
+									<input placeholder="Your Phone" type="tel">
+								</div>
+							</div>
+
+							<div class="input-wrap input-wrap-2 input-wrap-ta">
+								<textarea placeholder="Message"></textarea>
+							</div>
+
+							<button class="btn btn-s-1 btn-a btn-send">
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+								  <defs>
+								    <filter id="goo2">
+								      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+								      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+								      <feComposite in="SourceGraphic" in2="goo2"/>
+								    </filter>
+								  </defs>
+								</svg>
+
+								<span class="btn-bubble-container">
+									<a href="#" class="btn-inner btn-bubble">
+										<img src="{% static '/images/svg/send.svg' %}" alt="">
+									</a>
+									<span class="btn-bubble-effect-container">
+										<span class="circle top-left"></span>
+										<span class="circle top-left"></span>
+										<span class="circle top-left"></span>
+
+										<span class="btn-inner effect-button"></span> 
+
+										<span class="circle bottom-right"></span>
+										<span class="circle bottom-right"></span>
+										<span class="circle bottom-right"></span>
+									</span>
+								</span> 
+							</button> -->
+						</form>
+					</div>
+				<!-- </div> -->
+			</div>
+			
+	
+		</div><!-- / Content Wrap -->
+		
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		
+
+	<!-- Scripts -->
+		<script src="{% static '/js/button-hover-effect/CSSPlugin.min.js' %}"></script>
+		<script src="{% static '/js/button-hover-effect/EasePack.min.js' %}"></script>
+		<script src="{% static '/js/button-hover-effect/TweenLite.min.js' %}"></script>
+		<script src="{% static '/js/button-hover-effect/TimelineLite.min.js' %}"></script>
+		
+		<script src="{% static '/js/chosen.jquery.min.js' %}"></script>
+		<script src="{% static '/js/itemslide.min.js' %}"></script> 
+		<script src="{% static '/js/modernizr-custom.js' %}"></script> 
+		<script src="{% static '/js/scripts.js' %}"></script> 
+        <script src="{% static '/js/plugins.js' %}"></script> 
+		
+		<!-- Live Reload -->
+		<script src="http://localhost:35729/livereload.js"></script>
+		{% endblock %}
+	</body>
+</html>
+

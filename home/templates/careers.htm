@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+	{% extends "base.htm" %}
+	{% load static %}
+
+	{% block content %}		
+		<!-- Content -->
+		<div class="content-wrap content-wrap-bg">
+			
+			<!-- Orbit -->
+			<div class="orbit-wrap inner">
+				<ul class="orbit">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<div class="orbit-star orbit-star-1">
+					<span></span>
+				</div>
+				<div class="orbit-star orbit-star-2">
+					<span></span>
+				</div>
+				<div class="orbit-star orbit-star-3">
+					<span></span>
+				</div>
+				<div class="orbit-star orbit-star-4">
+					<span></span>
+				</div>
+			</div>
+
+			<!-- Stars -->
+			<div class="stars-wrap">
+				<div class="stars-1"></div>
+				<div class="stars-2"></div>
+				<div class="stars-3"></div>
+				<div class="stars-4"></div>
+			</div>
+			
+			<!-- Content -->	
+			<div class="content-socket-c">
+
+				<!-- Title -->
+				<div class="title-page">
+					<div class="title">
+						Careers
+					</div>	
+					<div class="title-s">
+						We’re hiring
+					</div>
+				</div>			
+
+				<!-- Careers -->
+				<div class="career-wrap">
+					
+					<div class="career-slider">
+						<div data-href="tab-1">
+							<div class="career-ship">
+								<img class="size-2" src="{% static '/images/ships/corvette_captain.svg' %}" alt="">
+							</div>
+
+							<span>FrontEnd Developer</span>
+						</div>
+
+						<div data-href="tab-2">
+							<div class="career-ship">
+								<img class="size-1" src="{% static '/images/ships/astronaut.svg' %}" alt="">
+							</div>
+
+							<span>Backend Developer</span>
+						</div>
+
+						<div data-href="tab-3">
+							<div class="career-ship">
+								<img class="size-3" src="{% static '/images/ships/counter_admiral.svg' %}" alt="">
+							</div>
+
+							<span>PHP Developer</span>
+						</div>
+
+						<div data-href="tab-4">
+							<div class="career-ship">
+								<img class="size-2" src="{% static '/images/ships/corvette_captain.svg' %}" alt="">
+							</div>
+
+							<span>Mobile Developer</span>
+						</div>
+
+						<div data-href="tab-5">
+							<div class="career-ship">
+								<img class="size-1" src="{% static '/images/ships/astronaut.svg' %}" alt="">
+							</div>
+
+							<span>Wordpress Developer</span>
+						</div>
+
+						<div data-href="tab-6">
+							<div class="career-ship">
+								<img class="size-3" src="{% static '/images/ships/counter_admiral.svg' %}" alt="">
+							</div>
+
+							<span>Java-Script Developer</span>
+						</div>
+					</div>
+
+					<div class="career-items left">
+						<div class="career-item active" data-href="tab-1">
+							<img class="size-2" src="{% static '/images/ships/corvette_captain.svg' %}" alt="">
+
+							<span>PHP Developer</span>
+						</div>
+
+						<div class="career-item" data-href="tab-2">
+							<img class="size-1" src="{% static '/images/ships/astronaut.svg' %}" alt="">
+
+							<span>Mobile Developer</span>
+						</div>
+
+						<div class="career-item" data-href="tab-3">
+							<img class="size-3" src="{% static '/images/ships/counter_admiral.svg' %}" alt="">
+
+							<span>JavaScipt Developer>
+						</div>
+					</div>
+
+					<div class="career-items right">
+						<div class="career-item" data-href="tab-4">
+							<img class="size-2" src="{% static '/images/ships/corvette_captain.svg' %}" alt="">
+
+							<span>ReactNative Developer</span>
+						</div>
+
+						<div class="career-item" data-href="tab-5">
+							<img class="size-1" src="{% static '/images/ships/astronaut.svg' %}" alt="">
+
+							<span>FrontEnd Developer</span>
+						</div>
+
+						<div class="career-item" data-href="tab-6">
+							<img class="size-3" src="{% static '/images/ships/counter_admiral.svg' %}" alt="">
+
+							<span>BackEnd Developer</span>
+						</div>
+					</div>
+
+					<div class="career-window">
+
+						<div class="figure-1"></div>
+						<div class="figure-2"></div>
+						
+							<div class="career-block active" id="tab-1">
+								
+								<div class="career-ship">
+									<img class="size-2" src="{% static '/images/ships/corvette_captain.svg' %}" alt="">
+								</div>
+							
+								<div class="career-vac">
+									PHP Developer
+								</div>
+								<div class="title-s">
+									2 years of experience
+								</div>
+								
+								<div class="scroll-wrap">
+									<div class="career-main text scroll">
+										<p>
+											Bachelor's degree in Computer Science or a similar field. Knowledge of PHP web frameworks including Yii, Laravel, and CodeIgniter. Knowledge of front-end technologies including CSS3, JavaScript, and HTML5. Understanding of object-oriented PHP programming.
+										</p>
+										<p>
+											We need to invest in it all the knowledge and inspiration. Both, the app developers team and business side must get involved to a process. 
+										</p>
+									</div>
+								</div>
+
+								<div class="career-main form">
+									<form action="" method="post">  
+										<br>
+										{% csrf_token %}
+										<table>
+										{{ form.as_table }}                   
+											<tr>
+												<td></td>
+												<td><button class="btn btn-s-1 btn-a btn-launch">
+													
+													<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+													  <defs>
+														<filter id="goo2">
+														  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+														  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+														  <feComposite in="SourceGraphic" in2="goo2"/>
+														</filter>
+													  </defs>
+													</svg>
+				
+													<span class="btn-bubble-container">
+														<a href="" class="btn-inner btn-bubble">
+															<input type="submit" value="Launch Spaceship" style="background: none; border: none; " >
+														
+														</a>
+														
+														<span class="btn-bubble-effect-container">
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+				
+															<span class="btn-inner effect-button"></span> 
+				
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+														</span>
+													</span> 
+													
+												</button></td>
+												
+											</tr>
+											{% for msg in messages %}
+												{{msg}}
+											{% endfor %} 
+										</table>
+									</form>
+								</div>
+
+								<button class="btn btn-s-1 btn-a btn-apply">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+									  <defs>
+									    <filter id="goo2">
+									      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+									      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+									      <feComposite in="SourceGraphic" in2="goo2"/>
+									    </filter>
+									  </defs>
+									</svg>
+
+									<span class="btn-bubble-container">
+										<a href="" class="btn-inner btn-bubble">
+											Apply
+										</a>
+										<span class="btn-bubble-effect-container">
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+
+											<span class="btn-inner effect-button"></span> 
+
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+										</span>
+									</span> 
+								</button>
+
+								
+							</div>
+
+							<div class="career-block" id="tab-2">
+								<div class="career-ship">
+									<img class="size-1" src="{% static '/images/ships/astronaut.svg' %}" alt="">
+								</div>
+
+								<div class="career-vac">
+									Mobile Developer
+								</div>
+								<div class="title-s">
+									Fresher
+								</div>
+								
+								<div class="scroll-wrap">
+									<div class="career-main text scroll">
+										<p>
+											A bachelor's degree in Computer Science or relevant field is required as well as 1 years of demonstrable experience for mobile developers. Successful mobile developers possess excellent analytical skills with a good problem-solving attitude and are able to perform in a team environment. 
+										</p>
+										<p>
+											We need to invest in it all the knowledge and inspiration. Both, the app developers team and business side must and opened agai get involved to a process. If we want to make a mobile app that is talked about invest in it all the knowledge and inspiration.
+										</p>
+										<p>
+											Time-consuming and creative process at the same time. If we want to make a mobile app that is talked about, downloaded and opened again and again, it`s not enough to make just a technically perfect product.
+										</p>
+										<p>
+											We need to invest in it all the knowledge and inspiration. Both, the app developers team and business side must and opened agai get involved to a process. 
+										</p>
+									</div>
+								</div>
+
+								<div class="career-main form">
+									<form action="" method="post">  
+										<br>
+										{% csrf_token %}
+										<table>
+										{{ form.as_table }}                   
+											<tr>
+												<td></td>
+												<td><button class="btn btn-s-1 btn-a btn-launch">
+													
+													<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+													  <defs>
+														<filter id="goo2">
+														  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+														  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+														  <feComposite in="SourceGraphic" in2="goo2"/>
+														</filter>
+													  </defs>
+													</svg>
+				
+													<span class="btn-bubble-container">
+														<a href="" class="btn-inner btn-bubble">
+															<input type="submit" value="Launch Spaceship" style="background: none; border: none; " >
+														
+														</a>
+														
+														<span class="btn-bubble-effect-container">
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+				
+															<span class="btn-inner effect-button"></span> 
+				
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+														</span>
+													</span> 
+													
+												</button></td>
+												
+											</tr>
+											{% for msg in messages %}
+												{{msg}}
+											{% endfor %} 
+										</table>
+									</form>
+								</div>
+
+								<button class="btn btn-s-1 btn-a btn-apply">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+									  <defs>
+									    <filter id="goo2">
+									      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+									      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+									      <feComposite in="SourceGraphic" in2="goo2"/>
+									    </filter>
+									  </defs>
+									</svg>
+
+									<span class="btn-bubble-container">
+										<a href="№" class="btn-inner btn-bubble">
+											Apply
+										</a>
+										<span class="btn-bubble-effect-container">
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+
+											<span class="btn-inner effect-button"></span> 
+
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+										</span>
+									</span> 
+								</button>
+
+								
+							</div>
+
+							<div class="career-block" id="tab-3">
+								<div class="career-ship">
+									<img class="size-3" src="{% static '/images/ships/corvette_captain.svg' %}" alt="">
+								</div>
+
+								<div class="career-vac">
+									JavaSricpt Developer
+								</div>
+								<div class="title-s">
+									Fresher
+								</div>
+								
+								<div class="scroll-wrap">
+									<div class="career-main text scroll">
+										<p>
+											We are looking for a passionate JavaScript Developer to be responsible for all front-end platform related duties, from developing designs for complicated applications to analyzing code. The JavaScript Developer's responsibilities include optimizing applications, ensuring UI/UX feasibility, and implementing API designs and architecture.
+										</p>
+										<p>
+											Degree in Computer Science, Engineering, MIS, or related field.
+										</p>
+										<p>Extensive knowledge and understanding of JavaScript.</p>
+										<p>
+										Experience with JavaScript libraries (e.g. ExtJS, Backbone JS, and Angular JS).</p>
+													<p>
+													Proficiency in browser rendering behavior and performance.</p>
+														<p>
+													Experience in front-end tools (e.g. Grunt and Gulp JS.)
+												Sound understanding of web markup, such as HTML5. </p>
+										</p>
+									</div>
+								</div>
+
+								<div class="career-main form">
+									<form action="" method="post">  
+										<br>
+										{% csrf_token %}
+										<table>
+										{{ form.as_table }}                   
+											<tr>
+												<td></td>
+												<td><button class="btn btn-s-1 btn-a btn-launch">
+													
+													<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+													  <defs>
+														<filter id="goo2">
+														  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+														  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+														  <feComposite in="SourceGraphic" in2="goo2"/>
+														</filter>
+													  </defs>
+													</svg>
+				
+													<span class="btn-bubble-container">
+														<a href="" class="btn-inner btn-bubble">
+															<input type="submit" value="Launch Spaceship" style="background: none; border: none; " >
+														
+														</a>
+														
+														<span class="btn-bubble-effect-container">
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+				
+															<span class="btn-inner effect-button"></span> 
+				
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+														</span>
+													</span> 
+													
+												</button></td>
+												
+											</tr>
+											{% for msg in messages %}
+												{{msg}}
+											{% endfor %} 
+										</table>
+									</form>
+								</div>
+
+								<button class="btn btn-s-1 btn-a btn-apply">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+									  <defs>
+									    <filter id="goo2">
+									      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+									      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+									      <feComposite in="SourceGraphic" in2="goo2"/>
+									    </filter>
+									  </defs>
+									</svg>
+
+									<span class="btn-bubble-container">
+										<a href="№" class="btn-inner btn-bubble">
+											Apply
+										</a>
+										<span class="btn-bubble-effect-container">
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+
+											<span class="btn-inner effect-button"></span> 
+
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+										</span>
+									</span> 
+								</button>
+
+								
+							</div>
+
+							<div class="career-block" id="tab-4">
+								<div class="career-ship">
+									<img class="size-2" src="{% static '/images/ships/counter_admiral.svg' %}" alt="">
+								</div>
+
+								<div class="career-vac">
+									React-ReactNative Developer
+								</div>
+								<div class="title-s">
+									Fresher
+								</div>
+								
+								<div class="scroll-wrap">
+									<div class="career-main text scroll">
+										<p>
+											Strong knowledge of JavaScript, and also programming language fundamentals since as a React Native developer reading code in Swift, Java, Objective-C is required. Understanding of how React Native works architecturally in order to understand where a bug could be. Basic experience with Mobile UI.
+										</p>
+										<p>
+											We need to invest in it all the knowledge and inspiration. Both, the app developers team and business side must and opened agai get involved to a process. 
+										</p>
+									</div>
+								</div>
+
+								<div class="career-main form">
+									<form action="" method="post">  
+										<br>
+										{% csrf_token %}
+										<table>
+										{{ form.as_table }}                   
+											<tr>
+												<td></td>
+												<td><button class="btn btn-s-1 btn-a btn-launch">
+													
+													<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+													  <defs>
+														<filter id="goo2">
+														  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+														  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+														  <feComposite in="SourceGraphic" in2="goo2"/>
+														</filter>
+													  </defs>
+													</svg>
+				
+													<span class="btn-bubble-container">
+														<a href="" class="btn-inner btn-bubble">
+															<input type="submit" value="Launch Spaceship" style="background: none; border: none; " >
+														
+														</a>
+														
+														<span class="btn-bubble-effect-container">
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+				
+															<span class="btn-inner effect-button"></span> 
+				
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+														</span>
+													</span> 
+													
+												</button></td>
+												
+											</tr>
+											{% for msg in messages %}
+												{{msg}}
+											{% endfor %} 
+										</table>
+									</form>
+								</div>
+
+								<button class="btn btn-s-1 btn-a btn-apply">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+									  <defs>
+									    <filter id="goo2">
+									      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+									      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+									      <feComposite in="SourceGraphic" in2="goo2"/>
+									    </filter>
+									  </defs>
+									</svg>
+
+									<span class="btn-bubble-container">
+										<a href="№" class="btn-inner btn-bubble">
+											Apply
+										</a>
+										<span class="btn-bubble-effect-container">
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+
+											<span class="btn-inner effect-button"></span> 
+
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+										</span>
+									</span> 
+								</button>
+
+								
+							</div>
+
+							<div class="career-block" id="tab-5">
+								<div class="career-ship">
+									<img class="size-1" src="{% static '/images/ships/astronaut.svg' %}" alt="">
+								</div>
+
+								<div class="career-vac">
+									FrontEnd Developer
+								</div>
+								<div class="title-s">
+									Fresher
+								</div>
+								
+								<div class="scroll-wrap">
+									<div class="career-main text scroll">
+										<p>
+											Be proficient in coding languages such as HTML, CSS, JavaScript, and jQuery. Understand server-side CSS. Be experienced with graphic design applications (e.g., Adobe Illustrator) Understand the principles of SEO.
+										</p>
+										<p>
+											We need to invest in it all the knowledge. Both, the app developers team and business side must and opened agai get involved to a process. 
+										</p>
+									</div>
+								</div>
+
+								<div class="career-main form">
+									<form action="" method="post">  
+										<br>
+										{% csrf_token %}
+										<table>
+										{{ form.as_table }}                   
+											<tr>
+												<td></td>
+												<td><button class="btn btn-s-1 btn-a btn-launch">
+													
+													<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+													  <defs>
+														<filter id="goo2">
+														  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+														  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+														  <feComposite in="SourceGraphic" in2="goo2"/>
+														</filter>
+													  </defs>
+													</svg>
+				
+													<span class="btn-bubble-container">
+														<a href="" class="btn-inner btn-bubble">
+															<input type="submit" value="Launch Spaceship" style="background: none; border: none; " >
+														
+														</a>
+														
+														<span class="btn-bubble-effect-container">
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+				
+															<span class="btn-inner effect-button"></span> 
+				
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+														</span>
+													</span> 
+													
+												</button></td>
+												
+											</tr>
+											{% for msg in messages %}
+												{{msg}}
+											{% endfor %} 
+										</table>
+									</form>
+								</div>
+
+								<button class="btn btn-s-1 btn-a btn-apply">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+									  <defs>
+									    <filter id="goo2">
+									      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+									      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+									      <feComposite in="SourceGraphic" in2="goo2"/>
+									    </filter>
+									  </defs>
+									</svg>
+
+									<span class="btn-bubble-container">
+										<a href="№" class="btn-inner btn-bubble">
+											Apply
+										</a>
+										<span class="btn-bubble-effect-container">
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+
+											<span class="btn-inner effect-button"></span> 
+
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+										</span>
+									</span> 
+								</button>
+							</div>
+
+							<div class="career-block" id="tab-6">
+								<div class="career-ship">
+									<img class="size-3" src="{% static '/images/ships/counter_admiral.svg' %}" alt="">
+								</div>
+
+								<div class="career-vac">
+									Backend Developer
+								</div>
+								<div class="title-s">
+									1 years of experience
+								</div>
+								
+								<div class="scroll-wrap">
+									<div class="career-main text scroll">
+										<p>
+											We are looking for an analytical, results-driven Back-end Developer who will work with team members to troubleshoot and improve current back-end applications and processes. The Back-end Developer will use his or her understanding of programming languages and tools to analyze current codes and industry developments, formulate more efficient processes, solve problems, and create a more seamless experience for users. You should have excellent communication, computer, and project management skills.
+										</p>
+										<p>
+											We need to invest in it all the knowledge and inspiration. Both developers team and business side must and opened agai get involved to a process. 
+										</p>
+									</div>
+								</div>
+
+								<div class="career-main form">
+									<form action="" method="post">  
+										<br>
+										{% csrf_token %}
+										<table>
+										{{ form.as_table }}                   
+											<tr>
+												<td></td>
+												<td><button class="btn btn-s-1 btn-a btn-launch">
+													
+													<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+													  <defs>
+														<filter id="goo2">
+														  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+														  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+														  <feComposite in="SourceGraphic" in2="goo2"/>
+														</filter>
+													  </defs>
+													</svg>
+				
+													<span class="btn-bubble-container">
+														<a href="" class="btn-inner btn-bubble">
+															<input type="submit" value="Launch Spaceship" style="background: none; border: none; " >
+														
+														</a>
+														
+														<span class="btn-bubble-effect-container">
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+															<span class="circle top-left"></span>
+				
+															<span class="btn-inner effect-button"></span> 
+				
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+															<span class="circle bottom-right"></span>
+														</span>
+													</span> 
+													
+												</button></td>
+												
+											</tr>
+											{% for msg in messages %}
+												{{msg}}
+											{% endfor %} 
+										</table>
+									</form>
+								</div>
+
+								<button class="btn btn-s-1 btn-a btn-apply">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+									  <defs>
+									    <filter id="goo2">
+									      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+									      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+									      <feComposite in="SourceGraphic" in2="goo2"/>
+									    </filter>
+									  </defs>
+									</svg>
+
+									<span class="btn-bubble-container">
+										<a href="№" class="btn-inner btn-bubble">
+											Apply
+										</a>
+										<span class="btn-bubble-effect-container">
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+											<span class="circle top-left"></span>
+
+											<span class="btn-inner effect-button"></span> 
+
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+											<span class="circle bottom-right"></span>
+										</span>
+									</span> 
+								</button>
+							</div>
+						
+
+					</div>
+
+				</div><!-- / Careers -->
+
+			</div><!-- / Content Socket -->		
+
+		</div><!-- / Content -->
+		
+
+
+	
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+		<!-- Scripts -->
+		<script src="{% static '/js/button-hover-effect/CSSPlugin.min.js' %}"></script>
+		<script src="{% static '/js/button-hover-effect/EasePack.min.js' %}"></script>
+		<script src="{% static '/js/button-hover-effect/TweenLite.min.js' %}"></script>
+		<script src="{% static '/js/button-hover-effect/TimelineLite.min.js' %}"></script>
+		
+		<script src="{% static '/js/jquery.mousewheel.min.js' %}"></script>
+        <script src="{% static '/js/perfect-scrollbar.jquery.min.js' %}"></script>
+		<script src="{% static '/js/slick.min.js' %}"></script> 
+		<script src="{% static '/js/itemslide.min.js' %}"></script> 
+		<script src="{% static '/js/modernizr-custom.js' %}"></script> 
+		
+        <script src="{% static '/js/plugins.js' %}"></script> 
+        <script src="{% static '/js/scripts.js' %}"></script> 
+		
+		<!-- Live Reload -->
+		<script src="http://localhost:35729/livereload.js' %}"></script>
+		{% endblock %}
+	</body>
+</html>
+

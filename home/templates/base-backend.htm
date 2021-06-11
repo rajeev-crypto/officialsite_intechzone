@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8" />
+		<title>InTechZone</title>
+		{% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<link rel="icon" type="image/vnd.microsoft.icon" href="{% static '/favicon.png' %}" />
+		<link rel="shortcut icon" type="image/x-icon" href="{% static '/favicon.png' %}"  />
+		
+        <link type="text/css" rel="stylesheet" href="{% static '/css/normalize.css' %}" />
+        <link type="text/css" rel="stylesheet" href="{% static '/css/main.css' %}" />
+
+	</head>
+	
+	<body>
+
+		<!-- Menu Button --> 
+		<button class="menu-btn">
+			<i></i>
+		</button>
+
+		<!-- Menu -->
+		<nav class="menu-sidebar">
+            <a class="logo" href="{% url 'index' %}">
+				<img src="{% static '/images/logo.png' %}" alt="logo">
+
+			</a>
+			<ul class="menu">
+				<li class="with-menu-sub">
+					<span class="point">
+						<span class="cell">
+							<span class="menu-nm-wrap">
+								<span class="menu-bg"></span>
+								<span class="menu-nm">Services</span>
+							</span>
+						</span>
+					</span>
+
+					<ul class="menu-sub menu-sub-ser">
+						<li>
+							<a class="point" href="{% url 'webservices' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/web.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Web Development
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'desktopservices' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/dapp.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Desktop Applications
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'mobileservices' %}">
+								<span class="cell">
+									<span class="menu-ico sz-2 svg">
+										<img src="{% static '/images/svg/mdev.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Mobile Development
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'outstaffing' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/outs.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Outstaffing
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'proof' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/pcon.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Proof of Concept
+									</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="with-menu-sub">
+					<span class="point">
+						<span class="cell">
+							<span class="menu-nm-wrap">
+								<span class="menu-bg"></span>
+								<span class="menu-nm">Approach</span>
+							</span>
+						</span>
+					</span>
+
+					<ul class="menu-sub menu-sub-app">
+						<li>
+							<a class="point" href="{% url 'lean_approach' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/lean.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Lean <br> Approach
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'agile_project' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/agile.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Agile Project Management
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'minimum_val' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/min-valuable.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Minimum Valuable Product
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'cutting_edge' %}">
+								<span class="cell">
+									<span class="menu-ico sz-3 svg">
+										<img src="{% static '/images/svg/cutting.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Cutting Edge Technologies
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'high_performance' %}">
+								<span class="cell">
+									<span class="menu-ico sz-1 svg">
+										<img src="{% static '/images/svg/high-performance.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										High Performance
+									</span>
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a class="point" href="{% url 'high_quality' %}">
+								<span class="cell">
+									<span class="menu-ico sz-3 svg">
+										<img src="{% static '/images/svg/high-quality.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										High Quality Software
+									</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="with-menu-sub current">
+					<span class="point">
+						<span class="cell">
+							<span class="menu-nm-wrap">
+								<span class="menu-bg"></span>
+								<span class="menu-nm">Technologies</span>
+							</span>
+						</span>
+					</span>
+
+					<ul class="menu-sub menu-sub-tech">
+						<li>
+							<a class="point" href="{% url 'apps' %}">
+								<span class="cell">
+									<span class="menu-ico sz-2 svg">
+										<img src="{% static '/images/svg/apps.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Apps
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'frontend' %}">
+								<span class="cell">
+									<span class="menu-ico sz-3 svg">
+										<img src="{% static '/images/svg/front-end.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Front-End
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li class="current">
+							<a class="point" href="{% url 'backend' %}">
+								<span class="cell">
+									<span class="menu-ico sz-3 svg">
+										<img src="{% static '/images/svg/back-end.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Back-End
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'database' %}">
+								<span class="cell">
+									<span class="menu-ico sz-5 svg">
+										<img src="{% static '/images/svg/data-base.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										DataBase
+									</span>
+								</span>
+							</a>
+						</li>
+
+						<li>
+							<a class="point" href="{% url 'api' %}">
+								<span class="cell">
+									<span class="menu-ico sz-4 svg">
+										<img src="{% static '/images/svg/API-integration.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										API <br>Integration
+									</span>
+								</span>
+							</a>
+						</li>
+
+					</ul>	
+				</li>
+
+				<li class="with-menu-sub">
+					<span class="point">
+						<span class="cell">
+							<span class="menu-nm-wrap">
+								<span class="menu-bg"></span>
+								<span class="menu-nm">Portfolio</span>
+							</span>
+						</span>
+					</span>
+
+					<ul class="menu-sub menu-sub-port">
+						<li class="current">
+							<a class="point" href="{% url 'portfolio' %}">
+								<span class="cell">
+									<i>01</i>
+									<span class="menu-sub-nm">
+										coming soon..
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="point" href="{% url 'portfolio' %}">
+								<span class="cell">
+									<i>02</i>
+									<span class="menu-sub-nm">
+										coming soon..
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="point" href="{% url 'portfolio' %}">
+								<span class="cell">
+									<i>03</i>
+									<span class="menu-sub-nm">
+										coming soon..
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="point" href="{% url 'portfolio' %}">
+								<span class="cell">
+									<i>04</i>
+									<span class="menu-sub-nm">
+										coming soon..
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="point" href="{% url 'portfolio' %}">
+								<span class="cell">
+									<i>05</i>
+									<span class="menu-sub-nm">
+										coming soon..
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="point" href="{% url 'portfolio' %}">
+								<span class="cell">
+									<i>06</i>
+									<span class="menu-sub-nm">
+										coming soon..
+									</span>
+								</span>
+							</a>
+						</li>
+
+					</ul>
+				</li>
+
+				<li>
+					<a class="point" href="{% url 'blog' %}">
+						<span class="cell">
+							<span class="menu-nm-wrap">
+								<span class="menu-bg"></span>
+								<span class="menu-nm">Blog</span>
+							</span>
+						</span>
+					</a>
+				</li>
+
+				<li>
+					<a class="point" href="{% url 'careers' %}">
+						<span class="cell">
+							<span class="menu-nm-wrap">
+								<span class="menu-bg"></span>
+								<span class="menu-nm">Careers</span>
+							</span>
+						</span>
+					</a>
+				</li>
+
+				<li class="with-menu-sub">
+					<span class="point">
+						<span class="cell">
+							<span class="menu-nm-wrap">
+								<span class="menu-bg"></span>
+								<span class="menu-nm">About</span>
+							</span>
+						</span>
+					</span>
+
+					<ul class="menu-sub menu-sub-abt">
+						<li>
+							<a class="point" href="{% url 'team' %}">
+								<span class="cell">
+									<span class="menu-ico sz-3 svg">
+										<img src="{% static '/images/svg/team.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Team
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="point" href="{% url 'values' %}">
+								<span class="cell">
+									<span class="menu-ico sz-3 svg">
+										<img src="{% static '/images/svg/values.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Values
+									</span>
+								</span>
+							</a>
+						</li>
+						<!-- <li>
+							<a class="point" href="{% url 'social' %}">
+								<span class="cell">
+									<span class="menu-ico sz-3 svg">
+										<img src="{% static '/images/svg/social-side.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Social Side
+									</span>
+								</span>
+							</a>
+						</li> -->
+						<li>
+							<a class="point" href="{% url 'opensource' %}">
+								<span class="cell">
+									<span class="menu-ico sz-2 svg">
+										<img src="{% static '/images/svg/open-source.svg' %}" alt="">
+									</span>
+									<span class="menu-sub-nm">
+										Open Source
+									</span>
+								</span>
+							</a>
+						</li>
+					</ul>	
+				</li>
+			</ul>
+
+			<!-- <button class="btn btn-s-1">CONTACT US</button> -->
+
+			<button class="btn btn-s-1 btn-a">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+				  <defs>
+				    <filter id="goo">
+				      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+				      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+				      <feComposite in="SourceGraphic" in2="goo"/>
+				    </filter>
+				  </defs>
+				</svg>
+
+				<span class="btn-bubble-container">
+					<a href="{% url 'contacts' %}" class="btn-inner btn-bubble">
+						CONTACT US
+					</a>
+					<span class="btn-bubble-effect-container">
+						<span class="circle top-left"></span>
+						<span class="circle top-left"></span>
+						<span class="circle top-left"></span>
+
+						<span class="btn-inner effect-button"></span> 
+
+						<span class="circle bottom-right"></span>
+						<span class="circle bottom-right"></span>
+						<span class="circle bottom-right"></span>
+					</span>
+				</span> 
+			</button>
+		</nav><!-- / Menu -->	
+
+    {% block content %}{% endblock %}
+	
+</body>
+</html>

@@ -1,0 +1,568 @@
+
+/* =========================
+   Menu
+   ========================= */
+
+$menu-w: 250px;
+$menu-w-mid: 200px;
+$menu-w-m: 180px;
+
+.menu-sidebar {
+    position: fixed;
+    width: $menu-w;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 999;
+    text-align: left;
+
+    box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
+    -webkit-box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
+
+    transition: left 0.4s ease;
+    -webkit-transition: left 0.4s ease;
+    -ms-transition: left 0.4s ease;
+
+    .logo {
+        position: relative;
+        z-index: 1;
+        display: block;
+        height: 80px;
+        padding-top: 33px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
+        -webkit-box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
+        
+        @include mid {
+            height: 60px;
+            padding-top: 22px;
+        }    
+
+        svg, img {
+            width: 150px;
+            display: block;
+            margin: auto;
+
+            @include mid {
+                width: 120px;
+            }
+        }
+    }
+
+    .btn {
+        position: absolute;
+        width: 175px;
+        bottom: 40px;
+        left: 50%;
+        margin-left: -90px;
+
+        @include mid {
+            width: 140px;
+            height: 45px;
+            line-height: 45px;
+            font-size: 12px;
+            margin-left: -72px;
+            bottom: 21px !important;
+        }
+
+        @include tablet {
+            bottom: 28px !important;
+        }
+
+        @include mobile {
+            bottom: 15px !important;
+        }
+    }
+}
+
+.menu {
+    height: calc(100vh - 80px);
+    height: -webkit-calc(100vh - 80px);
+    padding-bottom: 180px;
+    background-color: #fff;
+
+    @include mid {
+        height: calc(100vh - 60px);
+        height: -webkit-calc(100vh - 60px);
+        padding-bottom: 120px;
+    }
+
+    @include mobile {
+        padding-bottom: 78px;
+    }
+
+    .point {
+        position: relative;
+        display: table;
+        width: 100%;
+        height: 101%;
+        text-decoration: none;
+        font-family: $med;
+        color: $col-b;
+        cursor: pointer;
+    }
+
+    li {
+        border-bottom: 1px solid $col-bor;
+    }
+
+    > li {
+        height: 14.28%;
+        background-color: #fff;
+        overflow: hidden;
+
+        .cell {
+            font-size: 0;
+        }
+        
+        > .point {
+            padding-left: 60px;
+            overflow: hidden;
+            z-index: 2;
+
+            @include mid {
+                padding-left: 40px;
+            }
+
+            @include tablet {
+                padding-left: 40px;
+            }
+            
+            &:after, &:before {
+               @extend .trans;
+               content:"";
+               position: absolute;
+               display: block;
+               top: 50%;
+               margin-top: -5px;
+            }
+            
+            &:before {
+                @include tr-right(5px, 5px, 5px, $col-r);
+                left: -5px;
+            }
+
+            &:after {
+                @include tr-left(5px, 5px, 5px, $col-r);
+                right: -5px;
+            }
+
+            i {
+                font-style: normal;
+            }
+        }
+
+        &.current { // li.current
+
+            .menu-nm {
+                left: 20px;
+            }
+            
+            > .point {
+                background-color: #F5F9FA;
+
+                &:before {
+                    @include tr-left(5px, 5px, 5px, $col-r);
+                    right: 0px;
+                    left: auto;
+                }
+            }
+
+            .menu-sub {
+                left: $menu-w;
+
+                @include mid {
+                    left: $menu-w-mid;
+                }
+
+                @include tablet {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+// Menu Hover Background
+.menu-nm-wrap {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    height: 30px;
+    line-height: 31px;
+    overflow: hidden;
+}
+
+.menu-bg {
+    @extend .trans;
+    position: absolute;
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 30px;
+    background-color: #EFEFF2;
+}
+
+.menu-nm {
+    @extend .trans;
+    position: relative;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-nm, .menu-sub-nm {
+    font-size: 16px;
+
+    @include tablet {
+        font-size: 15px;
+    }
+
+    @include lt {
+        font-size: 14px;
+    }
+}
+
+.menu-sub-nm {
+    font-size: 15px;
+}
+
+.menu > li:hover {
+
+    .menu-sub {
+        left: $menu-w;
+        z-index: -1;
+
+        @include mid {
+            left: $menu-w-mid;
+        }
+
+        @include tablet {
+            left: $menu-w-m;
+        }
+    }
+
+    &:not(.current):hover {
+
+        > .point:before {
+            left: 0;
+        }
+    }
+}
+
+.no-touchevents .menu > li { // HOVER
+    
+    &:hover {
+
+        .menu-nm {
+            left: 20px;
+        }
+
+        // @media (min-width: 1025px){
+
+        //     .menu-sub {
+        //         left: $menu-w !important;
+        //     }
+        // }
+    }
+
+    &:not(.current).hover .menu-bg {
+        width: 55px;
+    }
+
+    &.leave .menu-bg {
+        left: 150px;
+    }
+}
+
+.menu:hover li.current > .point:before {
+    right: -5px;
+}
+
+li.current:hover > .point:before {
+    right: 0px !important;
+}
+
+// Menu Sub
+.menu-sub {
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+
+    position: absolute;
+    z-index: -2;
+    width: 150px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+
+            box-shadow: 0px 2px 20px 0.2px rgba(80, 116, 165, 0.06);
+    -webkit-box-shadow: 0px 2px 20px 0.2px rgba(80, 116, 165, 0.06);
+
+    &:after {
+        @extend .ps;
+        width: 16px;
+        top: 0;
+        bottom: 0;
+        left: -16px;
+
+                box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
+        -webkit-box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
+    }
+    
+    > li {
+        @extend .trans;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            background-color: #FAFAFF;
+
+            i {
+                color: #fff;
+                z-index: 0;
+            }
+        }
+
+        i {
+            transition: color 0.4s;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            right: 3px;
+            font-style: normal;
+            font-family: $bold;
+            color: #F8FAFD;
+            font-size: 100px;
+            line-height: 25px;
+            height: 30px;
+            top: 50%;
+            margin-top: -15px;
+        }
+
+        &:before {
+            @extend .trans;
+            @include tr-left(5px, 5px, 5px, $col-f);
+            content:"";
+            position: absolute;
+            right: -5px;  
+            top: 50%;
+            margin-top: -5px;  
+        }
+
+        &.current:before {
+            right: 0;
+        }
+    }
+
+    .menu-sub-nm {
+        position: relative;
+        z-index: 2;
+        display: block;
+        padding: 0 10px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    &.hide {
+        left: 0 !important;
+    }
+}
+
+.menu-sub-ser li, .menu-sub-tech li {
+    height: 20%;
+}
+
+.menu-sub-app li, .menu-sub-port li {
+    height: 16.66%;
+}
+
+.menu-sub-abt li {
+    height: 25%;
+}
+
+@include mid {
+
+    .menu-sidebar {
+        width: $menu-w-mid;
+    }
+
+    .menu-sub {
+
+        .menu-sub-nm {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        > li i {
+            font-size: 85px;
+            line-height: 20px;
+        }
+    }
+}
+
+
+
+// Icons Size
+.menu-ico {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.menu-ico.sz-1 {
+    width: 40px;
+}
+
+.menu-ico.sz-2 {
+    width: 35px;
+}
+
+.menu-ico.sz-3 {
+    width: 45px;
+}
+
+.menu-ico.sz-4 {
+    width: 60px;
+}
+
+.menu-ico.sz-5 {
+    width: 65px;
+}
+
+@include mid {
+
+    .menu-ico {
+        margin-bottom: 12px;
+    }
+
+    .menu-ico.sz-1 {
+        width: 30px;
+    }
+
+    .menu-ico.sz-2 {
+        width: 25px;
+    }
+
+    .menu-ico.sz-3 {
+        width: 35px;
+    }
+
+    .menu-ico.sz-4 {
+        width: 50px;
+    }
+
+    .menu-ico.sz-5 {
+        width: 55px;
+    }
+}
+
+@media (min-width: 1025px) and (max-height: 650px){
+
+    .menu-ico {
+        margin-bottom: 6px;
+    }
+    
+    .menu-sub .menu-sub-nm { 
+        font-size: 13px;
+        line-height: 16px !important;
+    }    
+}
+
+// End Icons Size
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media (min-width: 1025px) and (max-height: 800px){
+
+    .menu {
+        height: calc(100vh - 50px);
+        height: -webkit-calc(100vh - 50px);
+        padding-bottom: 100px;
+    }
+
+    .menu-sidebar .btn {
+        bottom: 7px;
+    }
+}
+
+// Mobile Button
+.menu-btn {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 30px;
+    top: 30px;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+
+    &:after {
+        @extend .ps;
+        left: -10px;
+        top: -10px;
+        bottom: -10px;
+        right: -10px;
+    }
+
+    i {
+        top: 8px;
+        left: 0;
+    }
+
+    i, i:before, i:after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: rgba(255,255,255,0.5);
+    }
+
+    i:before, i:after {
+        @extend .ps;
+        left: 0;
+        top: -8px;
+    }
+
+    i:after {
+        top: 8px;
+    }
+
+    &.open {
+        background-color: blue;
+    }
+}
+
+@include tablet {
+
+    .menu-sidebar {
+        width: $menu-w-m;
+        left: 0;
+    }
+}
+
+@include mobile {
+
+    .menu-sidebar {
+        left: -$menu-w-m;
+
+        &.open {
+            left: 0;
+        }
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+@include mobile-s {
+
+    .menu-btn {
+        top: 20px;
+        left: 20px;
+    }
+}
